@@ -1,0 +1,86 @@
+<% layout('../layouts/mainlayout.ejs') -%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>My Reviews</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .delete-button {
+      background: none;
+      background-color: transparent;
+      border: none;
+      color: #007bff;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .delete-button:hover {
+      text-decoration: underline;
+    }
+
+    #wrap {
+      overflow-wrap: break-word
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <h1>MY REVIEWS</h1>
+    </br>
+  </div>
+
+  <% for(var i=0; i < movies.length; i++) { %>
+    <% for(var j=0; j < movies[i].reviewer.length; j ++) { %>
+    <% if(username == movies[i].reviewer[j]) { %>
+
+  <div class="container">
+   
+    <div class="row">
+
+      <div class="col-sm-4">
+        <h2 id="wrap"><%= movies[i].movieName %></h2>
+      </div>
+
+
+      <div class="col-sm-3">
+        </br></br>
+        <b>Stars: <%= movies[i].rating[j] %></b>
+        </br>
+        <b><%= movies[i].date[j] %></b>
+      </div>
+
+
+      <div class="col-sm-5">
+        </br></br>
+        <form action='/Movie/DeleteReview' method='Post'>
+
+          <a href='/User/EditReview?_id=<%= movies[i]._id %>'>Edit</a> | <input type="submit" value="Delete" id="delete"
+            class="delete-button">
+
+          <input id="_id" name="_id" type="hidden" value="<%= movies[i]._id %>">
+
+        </form>
+
+        <p id="wrap"><%= movies[i].review[j] %></p>
+      </div>
+
+
+
+    </div>
+  </div>
+  <% } %>
+  <% } %>
+  <% } %>
+</body>
+
+</html>

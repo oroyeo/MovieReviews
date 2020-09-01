@@ -1,0 +1,82 @@
+<% layout('../layouts/mainlayout.ejs') -%>
+
+</br>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Movie Reviews</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div>
+    <h1>Reviews</h1>
+    </br>
+  </div>
+  <div class="text-center" >
+    <h2><%= movie.movieName %></h2>
+  </div>
+
+  <div class='container'>
+    <div class="row">
+    <div class="col-sm-4" style='text-align: center;'>
+      <b>Rating out of 5</b>
+    </div>
+
+
+    <div class="col-sm-4">
+      <b>Review</b>
+    </div>
+
+
+    <div class="col-sm-4">
+      <a href='/Movie/WriteReview?_id=<%= movie._id %>'>Write a Review</a>
+    </div>
+  </div>
+  </div>
+
+  <% for(var i=0; i < movie.rating.length; i++) { %>
+
+  <div class="container">
+    
+    <div class="row">
+
+      <div class="col-sm-4" style='text-align: center'>
+        <p></p><%= movie.rating[i]%></p>
+    </br>
+      </div>
+
+
+      <div class="col-sm-4" style="overflow-wrap: break-word">
+
+        <p><%= movie.review[i] %></p>
+    </br>
+      </div>
+
+
+      <div class="col-sm-4">
+
+        <%= movie.reviewer[i] %>
+      </br>
+      <%= movie.date[i] %>
+    </br>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <% } %>
+</body>
+
+</html>

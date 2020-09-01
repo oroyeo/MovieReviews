@@ -1,0 +1,30 @@
+<% layout('../layouts/mainlayout.ejs') -%>
+
+</br>
+
+<table>
+    <% for (var i=0; i < movies.length; i++) { %>
+        <tr>
+            <td>
+                <h2><%= movies[i].movieName %></h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <% var sum = movies[i].rating.reduce( function(a, b) {return a + b;}, 0) %>
+                <% var stars = sum / movies[i].rating.length %>
+                <% if (isNaN(stars)) { %>
+                <b>Stars : N/A </b>
+                <% } else { %> 
+                <b>Stars: <%= stars.toFixed(1) %> </b>
+                <% } %>
+            </td>
+            <td>
+                <a href='/Movie/Reviews?_id=<%= movies[i]._id %>'>Reviews: <b></a> <b><%= movies[i].rating.length %></b>
+            </td>
+            <td>
+                <a href='/Movie/WriteReview?_id=<%= movies[i]._id %>'>Write Review</a>
+            </td>
+        </tr>
+    <% } %>
+ </table>
