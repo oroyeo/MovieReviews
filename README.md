@@ -22,9 +22,7 @@ This application was built for ACIT 2520 - Developing Web Applications.
 
 **_Dependencies_**
 
-ExpressJS is also required to run the server. 
-
-To do this, open your shell and navigate to the the app.js directory and enter the command `npm install express --save`
+Install EJS by navigating to app.js folder and running `npm install express --save`
 
 ## Usage
 
