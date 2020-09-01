@@ -15,12 +15,12 @@ This application was built for ACIT 2520 - Developing Web Applications.
 
 ## Installation
 
-**Required**
+**_Required_**
 
 [NodeJS](https://nodejs.org/en/)
 [MongoDB](https://www.mongodb.com/try/download/community)
 
-**Dependencies**
+**_Dependencies_**
 
 ExpressJS is also required to run the server. 
 
