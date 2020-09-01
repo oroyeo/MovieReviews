@@ -1,5 +1,5 @@
 # MovieReviews
-# MovieReviews
+
 ## Description
 A Movie Review web application that allows for users to register, login, and rate pre-existing movies. 
 
@@ -30,7 +30,10 @@ To do this, open your shell and navigate to the the app.js directory and enter t
 
 Before we begin, you'll need to enter some data into your Database. 
 
-Create a database by navigating to your MongoDB bin folder (x.x is the version number). For Windows `C:\Program Files\MongoDB\Server\x.x\bin`
+Create a database by navigating to your MongoDB bin folder (x.x is the version number). 
+
+For Windows `C:\Program Files\MongoDB\Server\x.x\bin`
+
 
 Next type the following commands:
 
@@ -39,6 +42,7 @@ mongod
 mongo
 use testdb
 ```
+
 
 Below we will be adding some data to our database:
 
