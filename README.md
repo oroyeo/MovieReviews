@@ -7,7 +7,7 @@ This application was built for ACIT 2520 - Developing Web Applications.
 
 ## Technologies Used
 
-** Built Using: **
+**Built Using:**
   - Node.JS
   - MongoDB
   - HTML
@@ -15,12 +15,12 @@ This application was built for ACIT 2520 - Developing Web Applications.
 
 ## Installation
 
-** Required **
+**Required**
 
 [NodeJS](https://nodejs.org/en/)
 [MongoDB](https://www.mongodb.com/try/download/community)
 
-** Dependencies **
+**Dependencies**
 
 ExpressJS is also required to run the server. 
 
