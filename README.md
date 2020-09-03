@@ -28,7 +28,7 @@ Install EJS by navigating to app.js folder and running `npm install express --sa
 
 Before we begin, you'll need to enter some data into your Database. 
 
-Create a database by navigating to your MongoDB bin folder (x.x is the version number). 
+Create a database by navigating to your MongoDB bin folder in your shell (x.x is the version number). 
 
 For Windows `C:\Program Files\MongoDB\Server\x.x\bin`
 
